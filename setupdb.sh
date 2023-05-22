@@ -33,7 +33,7 @@ if [ ${datadir} != ${data_path} ]; then
 	sudo mv /var/lib/mysql /u01/share
 	sudo chown mysql:mysql -R /u01/share/mysql #(-R == tất cả thư mục con)
 	sudo sed -i -E 's/#? (datadir)\t= (.+)/\1 = \/u01\/share\/mysql/' /etc/mysql/mysql.conf.d/mysqld.cnf
-	sudo sed -i -E 's/(^bind-address)\s+= (.+)/\1 = ${my_ip}/' /etc/mysql/mysql.conf.d/mysqld.cnf
+	sudo sed -i -E 's/(^bind-address)\s+= (.+)/\1 = $'my_ip'/' /etc/mysql/mysql.conf.d/mysqld.cnf
 	sudo sed -i -E 's/#? (server-id)\s+= (.+)/\1 = 1/' /etc/mysql/mysql.conf.d/mysqld.cnf
 
 	sudo service mysql start
