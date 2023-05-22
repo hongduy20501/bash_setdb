@@ -18,7 +18,7 @@ fi
 
 if [ $(systemctl is-enabled apparmor.service) == enabled ] || [ $(systemctl is-active apparmor.service) ==active ]; then
           # system is-enable/is-active
-          sudo systemclt disable apparmor --now
+          sudo systemctl disable apparmor --now
           echo "Reboot máy !!!"
           exit 1
 fi
