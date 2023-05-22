@@ -78,12 +78,10 @@ echo 'FLUSH PRIVILEGES;' | MYSQL_PWD="hongduy" mysql -h mysql
 
 #sudo mysql -e "ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'hongduy'";
 #mysql -uroot -p$pass -e "CREATE USER 'root'@'%' IDENTIFIED BY 'hongduy'"
-#mysql -uroot -p$pass -e "ALTER USER 'root'@'%' INDENTIFIED WITH mysql_native_password BY 'hongduy'";
 #mysql -uroot -p$pass -e "GRANT ALL ON *.* TO root@'%'; FLUSH PRIVILEGES;";
 #mysql -uroot -p$pass -e "GRANT GRANT OPTION ON *.* TO 'root'@'%';"
 #mysql -uroot -p$pass -e "DROP USER 'root'@'localhost'";
 #mysql -uroot -p$pass -e "CREATE USER 'slave'@'10.238.153.254' IDENTIFIED BY 'slaveduy'";
 #mysql -uroot -p$pass -e "GRANT REPLICATION SLAVE ON *.* TO 'slave'@'10.238.153.254'; FLUSH PRIVILEDES;";
-#mysql -uroot -p$pass -e "ALTER USER 'slave'@'10.238.153.254' IDENTIFIED WITH mysql_native_password BY 'slaveduy'";
 echo "ok"
 
