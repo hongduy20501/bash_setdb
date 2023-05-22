@@ -40,11 +40,11 @@ if [ ${datadir} != ${data_path} ]; then
 fi
 
 # neu mysql chua run
-while [ $(service mysql status | grep -c runing) != 1 ]; do true; done
+while [ $(systemctl is-active mysql.service) != active ]; do
+  sleep 10
+done
+echo 'ok'
 
-mysql -u root -p root -e 'SELECT 1';
-
-#if [$(which ser)]
 #pass=hongduy
 
 #if [ $(có thể login bằng empty password)]; then
