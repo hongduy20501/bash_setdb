@@ -16,7 +16,7 @@ if [ $(service mysql status | grep -c running) != 1 ]; then
   exit 1
 fi
 
-if [ $(systemctl is-enabled apparmor.service) == enabled ] || [ $(systemctl is-active apparmor.service) ==active ]; then
+if [ $(systemctl is-enabled apparmor.service) == enabled ] || [ $(systemctl is-active apparmor.service) == active ]; then
           # system is-enable/is-active
           sudo systemctl disable apparmor --now
           echo "Reboot máy !!!"
